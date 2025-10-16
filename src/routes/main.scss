@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: $cor-fundo;
+  color: $cor-texto;
+  gap: $espacamento-padrao;
+}
+
+input {
+  padding: 1.5rem;
+  font-size: $fonte-tamanho-base;
+  border: 1px solid $cor-borda-clara;
+  border-radius: 48px;
+  width: 300px;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+    border-color: $cor-primaria;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+  }
+}
+
+canvas {
+  margin-top: $espacamento-padrao;
+  background: #fff;
+  border: 1px solid $cor-borda-clara;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
