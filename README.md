@@ -5,7 +5,13 @@
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-%23CD6799.svg?style=for-the-badge&logo=sass&logoColor=white)
 
-Gerador de QR Code desenvolvido em Svelte para fins de estudo e prática do framework.
+Aplicação para gerar QR Codes, criada com Svelte como um exercício prático da tecnologia.
+
+## Funcionalidades
+
+- **Geração em Tempo Real:** O QR Code é criado e atualizado instantaneamente enquanto você digita, oferecendo um feedback visual imediato.
+- **Inversão de Cores:** Personalize o visual do QR Code alternando entre o esquema de cores padrão (preto) e o invertido (branco) para melhor se adaptar a fundos escuros ou claros.
+- **Interface Minimalista:** Design limpo e focado que coloca a funcionalidade principal em primeiro plano, proporcionando uma experiência de uso direta e sem distrações.
 
 ## Tecnologias
 
