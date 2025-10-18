@@ -1,35 +1,148 @@
-@import './variables.scss';
+@import "./variables.scss";
 
-main {
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: linear-gradient(135deg, $bg-gradient-start, $bg-gradient-end);
+  color: $text-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  gap: $spacing-lg;
+  background-color: $card-bg;
+  padding: $spacing-lg;
+  border-radius: $border-radius-card;
+  border: 1px solid $card-border;
+  width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.left-panel,
+.right-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: system-ui, sans-serif;
-  background: $cor-fundo;
-  color: $cor-texto;
-  gap: $espacamento-padrao;
+  flex: 1;
 }
 
-input {
-  padding: 1.5rem;
-  font-size: $fonte-tamanho-base;
-  border: 1px solid $cor-borda-clara;
-  border-radius: 48px;
-  width: 300px;
-  text-align: center;
+.left-panel {
+  gap: $spacing-md;
 
-  &:focus {
-    outline: none;
-    border-color: $cor-primaria;
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+  canvas {
+    border-radius: $border-radius-card;
   }
 }
 
-canvas {
-  margin-top: $espacamento-padrao;
-  background: #fff;
-  border: 1px solid $cor-borda-clara;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.right-panel {
+  align-items: flex-start;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.color-selector {
+  width: 100%;
+  text-align: center;
+  p {
+    margin: 0 0 0.5rem 0;
+    color: $text-secondary;
+    font-size: 0.9rem;
+  }
+  .swatches {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .color-swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &.white {
+      background-color: #fff;
+    }
+    &.black {
+      background-color: #000;
+    }
+
+    &.active {
+      border-color: $button-primary-bg;
+      transform: scale(1.1);
+    }
+  }
+}
+
+h1 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.75rem;
+  span {
+    font-weight: 600;
+  }
+}
+
+.form-group {
+  width: 100%;
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $text-secondary;
+    font-size: 0.9rem;
+  }
+  input {
+    width: 100%;
+    background-color: $input-bg;
+    border: 1px solid $card-border;
+    color: $text-light;
+    padding: 0.75rem 1rem;
+    border-radius: $border-radius-input;
+    font-size: 1rem;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: $button-primary-bg;
+    }
+    &::placeholder {
+      color: #888888;
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: $border-radius-btn;
+  background-color: $button-primary-bg;
+  color: $text-light;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+
+  &:hover {
+    background-color: $button-primary-hover;
+  }
+}
+
+.btn-generate {
+  margin-top: auto;
+}
+
+.github-link {
+  display: none;
+}
+
+.footer-actions {
+  width: 100%;
+  display: block;
 }
