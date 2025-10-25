@@ -20,3 +20,11 @@ Aplicação para gerar QR Codes, criada com Svelte como um exercício prático d
 - Vite
 - SCSS
 - HTML5 & CSS3
+
+## Instalação
+
+```bash
+git clone https://github.com/caiolucasbittencourt/qr
+cd qr
+npm install
+npm run dev
